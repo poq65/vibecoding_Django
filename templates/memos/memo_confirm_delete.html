@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h2 class="card-title mb-4">메모 삭제</h2>
+                    <p class="lead">정말로 이 메모를 삭제하시겠습니까?</p>
+                    <p><strong>"{{ memo.title }}"</strong></p>
+                    <form method="POST">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger">삭제</button>
+                        <a href="{% url 'memo_detail' memo.pk %}" class="btn btn-secondary">취소</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
