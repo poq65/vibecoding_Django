@@ -1,0 +1,135 @@
+/* 기본 스타일 */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 네비게이션 바 스타일 */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* 카드 스타일 */
+.card {
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-title {
+    font-weight: bold;
+    color: #333;
+}
+
+/* 버튼 스타일 */
+.btn {
+    border-radius: 5px;
+    padding: 8px 20px;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+/* 메모 리스트 스타일 */
+.memo-list {
+    margin-top: 2rem;
+}
+
+.memo-item {
+    height: 100%;
+}
+
+/* 폼 스타일 */
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}
+
+.form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+/* 알림 메시지 스타일 */
+.alert {
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .card {
+        margin-bottom: 1rem;
+    }
+}
+
+/* 애니메이션 */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 메모 상세 페이지 스타일 */
+.memo-detail {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.memo-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+
+/* 메모 작성/수정 폼 스타일 */
+.memo-form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.memo-form textarea {
+    min-height: 200px;
+}
+
+/* 로그인/회원가입 폼 스타일 */
+.auth-form {
+    max-width: 400px;
+    margin: 2rem auto;
+}
+
+/* 프로필 페이지 스타일 */
+.profile-section {
+    max-width: 600px;
+    margin: 0 auto;
+}
