@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     # Third party apps
     'crispy_forms',
     'crispy_bootstrap4',
+    'axes',
     
     # Local apps
     'users.apps.UsersConfig',
@@ -74,7 +75,18 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'axes.middleware.AxesMiddleware',
 ]
+
+# Django Axes Configuration
+AUTHENTICATION_BACKENDS = [
+    'axes.backends.AxesBackend',
+    'django.contrib.auth.backends.ModelBackend',
+]
+
+AXES_FAILURE_LIMIT = 5  # 5회 실패시 잠금
+AXES_COOLOFF_TIME = 1  # 1시간 동안 잠금
+AXES_LOCKOUT_PARAMETERS = ['ip_address', 'username']  # 사용자와 IP 조합으로 잠금
 
 ROOT_URLCONF = 'memojjang.urls'
 
