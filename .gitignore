@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.manifest
+*.spec
+
+# Django
+*.log
+*.pot
+*.pyc
+*.pyo
+*.db
+*.sqlite3
+media/
+staticfiles/
+
+# VSCode
+.vscode/
+
+# 환경설정
+.env
+*.env
+
+# macOS
+.DS_Store
+
+# 기타
+*.bak
+*.swp
+
+# 테스트
+htmlcov/
+.coverage
+.tox/
+
+# 기타 IDE
+.idea/
+*.iml
+
+# node
+node_modules/
+
+# 기타
+*.tmp
+
